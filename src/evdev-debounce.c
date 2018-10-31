@@ -124,7 +124,7 @@ static inline void
 debounce_set_timer(struct fallback_dispatch *fallback,
 		   uint64_t time)
 {
-	const int DEBOUNCE_TIMEOUT_BOUNCE = ms2us(25);
+	const int DEBOUNCE_TIMEOUT_BOUNCE = ms2us(54);
 
 	libinput_timer_set(&fallback->debounce.timer,
 			   time + DEBOUNCE_TIMEOUT_BOUNCE);
@@ -134,7 +134,7 @@ static inline void
 debounce_set_timer_short(struct fallback_dispatch *fallback,
 			 uint64_t time)
 {
-	const int DEBOUNCE_TIMEOUT_SPURIOUS = ms2us(12);
+	const int DEBOUNCE_TIMEOUT_SPURIOUS = ms2us(40);
 
 	libinput_timer_set(&fallback->debounce.timer_short,
 			   time + DEBOUNCE_TIMEOUT_SPURIOUS);
